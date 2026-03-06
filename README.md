@@ -1,20 +1,21 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Swift Luxury Apartments - Premium Real Estate Presentation
 
-# Run and deploy your AI Studio app
+A high-end, minimalist web presentation designed for luxury apartments. This project focuses on sophisticated visual identity, clean UI/UX, and seamless user interaction.
 
-This contains everything you need to run your app locally.
+## 🚀 Technologies & Tools
+* **Frontend:** HTML5, CSS3 (Advanced layout & animations)
+* **Interactivity:** JavaScript (ES6+) for dynamic UI elements
+* **Layout:** Flexbox & CSS Grid for pixel-perfect responsiveness
+* **Typography:** Premium font pairing for a luxury feel
 
-View your app in AI Studio: https://ai.studio/apps/a62e9913-77ee-4892-a1b3-92bb90f70bfc
+## ✨ Key Features
+* **Elegant UI Design:** A minimalist aesthetic focused on high-quality imagery and white space.
+* **Fully Responsive:** Optimized for a flawless experience across all devices (Desktop, Tablet, and Mobile).
+* **Smooth Navigation:** Intuitive user flow and refined transition effects.
+* **Performance Optimized:** Clean code architecture ensuring fast loading times.
 
-## Run Locally
+## 🛠️ Project Overview
+This is a static front-end project developed to showcase skills in building premium digital products for the real estate and luxury sectors.
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+*Created as part of my professional portfolio to demonstrate expertise in high-end web development.*
