@@ -35,18 +35,18 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] w-full max-w-[100vw] overflow-x-hidden",
         isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-gold py-3 sm:py-4"
           : "bg-transparent py-4 sm:py-6",
       )}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
-        <Link to="/" className="flex flex-col items-start group">
-          <span className="font-serif-display text-2xl font-bold text-gold-gradient">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center min-w-0 w-full">
+        <Link to="/" className="flex flex-col items-start group min-w-0 shrink-0">
+          <span className="font-serif-display text-xl sm:text-2xl font-bold text-gold-gradient">
             Swift
           </span>
-          <span className="hidden sm:block font-sans-elegant text-xs tracking-[0.3em] uppercase text-foreground/60 group-hover:text-primary transition-colors duration-300">
+          <span className="hidden sm:block font-sans-elegant text-xs sm:tracking-[0.3em] uppercase text-foreground/60 group-hover:text-primary transition-colors duration-300 truncate max-w-[140px] md:max-w-none">
             Luxury Apartments
           </span>
         </Link>
@@ -86,7 +86,7 @@ export function Navbar() {
       {/* Mobile Nav - full-width, touch-friendly */}
       <div
         className={cn(
-          "md:hidden absolute top-full left-0 w-full bg-background/98 backdrop-blur-lg border-t border-border shadow-gold transition-all duration-300 overflow-hidden",
+          "md:hidden absolute top-full left-0 right-0 w-full max-w-full bg-background/98 backdrop-blur-lg border-t border-border shadow-gold transition-all duration-300 overflow-hidden",
           isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
         )}
       >

@@ -31,7 +31,7 @@ export function Layout() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground font-sans-elegant relative">
+    <div className="min-h-screen flex flex-col bg-background text-foreground font-sans-elegant relative overflow-x-hidden">
       <Navbar />
       <main className="flex-grow">
         <Outlet />

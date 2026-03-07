@@ -10,7 +10,7 @@ export default function AboutUs() {
   useScrollAnimation();
 
   return (
-    <div className="w-full bg-background min-h-screen">
+    <div className="w-full bg-background min-h-screen overflow-x-hidden">
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[400px] sm:min-h-[450px] md:min-h-[500px] md:h-[70vh] flex items-center">
         <div className="absolute inset-0 z-0">
@@ -45,7 +45,7 @@ export default function AboutUs() {
             { num: "2014", label: "Year Established" },
           ].map((stat, idx) => (
             <div key={idx}>
-              <div className="font-serif-display text-3xl md:text-4xl font-bold text-gold-gradient mb-2">
+              <div className="font-serif-display text-2xl sm:text-3xl md:text-4xl font-bold text-gold-gradient mb-2">
                 {stat.num}
               </div>
               <div className="font-sans-elegant text-xs tracking-widest uppercase text-muted">
@@ -60,7 +60,7 @@ export default function AboutUs() {
       <section className="py-16 sm:py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16 items-center">
           <div className="scroll-fade-left">
-            <h2 className="font-serif-display text-4xl font-bold text-gold-gradient mb-8">
+            <h2 className="font-serif-display text-2xl sm:text-3xl md:text-4xl font-bold text-gold-gradient mb-6 sm:mb-8">
               Our Story
             </h2>
             <div className="font-serif-body text-base md:text-lg text-muted-foreground space-y-5 leading-relaxed">
@@ -90,7 +90,7 @@ export default function AboutUs() {
   className="w-full h-full object-cover"
 />
             </div>
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 border-b-2 border-l-2 border-primary/30 pointer-events-none" />
+            <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-20 h-20 sm:w-32 sm:h-32 border-b-2 border-l-2 border-primary/30 pointer-events-none" />
           </div>
         </div>
       </section>
@@ -99,10 +99,10 @@ export default function AboutUs() {
       <section className="bg-secondary/20 py-16 sm:py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16 md:mb-20 scroll-fade-up">
-            <h2 className="font-serif-display text-4xl font-bold text-gold-gradient mb-6">
+            <h2 className="font-serif-display text-2xl sm:text-3xl md:text-4xl font-bold text-gold-gradient mb-4 sm:mb-6">
               Core Values
             </h2>
-            <p className="font-serif-body text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="font-serif-body text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
               The principles that guide our every decision and shape the
               experiences we create.
             </p>
@@ -140,7 +140,7 @@ export default function AboutUs() {
                 <div className="w-16 h-16 mx-auto rounded-full border border-primary/60 flex items-center justify-center mb-6 hover:bg-primary/10 transition-colors duration-300 group">
                   <val.icon className="text-primary w-8 h-8 group-hover:scale-110 transition-transform duration-500" />
                 </div>
-                <h3 className="font-serif-display text-xl font-semibold text-white mb-4">
+                <h3 className="font-serif-display text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">
                   {val.title}
                 </h3>
                 <p className="font-serif-body text-base text-muted-foreground leading-relaxed">
@@ -163,10 +163,10 @@ export default function AboutUs() {
   className="w-full h-full object-cover"
 />
             </div>
-            <div className="absolute -top-4 -right-4 w-32 h-32 border-t-2 border-r-2 border-primary/30 pointer-events-none" />
+            <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-20 h-20 sm:w-32 sm:h-32 border-t-2 border-r-2 border-primary/30 pointer-events-none" />
           </div>
           <div className="scroll-fade-right order-1 md:order-2">
-            <h2 className="font-serif-display text-4xl font-bold text-gold-gradient mb-8">
+            <h2 className="font-serif-display text-2xl sm:text-3xl md:text-4xl font-bold text-gold-gradient mb-6 sm:mb-8">
               Our Philosophy
             </h2>
             <div className="font-serif-body text-base md:text-lg text-muted-foreground space-y-5 leading-relaxed">
@@ -195,10 +195,10 @@ export default function AboutUs() {
       {/* CTA */}
       <section className="bg-secondary/20 border-t border-border py-16 sm:py-20 md:py-28">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center scroll-scale">
-          <h2 className="font-serif-display text-4xl font-bold text-gold-gradient mb-8">
+          <h2 className="font-serif-display text-2xl sm:text-3xl md:text-4xl font-bold text-gold-gradient mb-6 sm:mb-8">
             Experience the Extraordinary
           </h2>
-          <p className="font-serif-body text-lg text-muted-foreground mb-10">
+          <p className="font-serif-body text-base sm:text-lg text-muted-foreground mb-8 sm:mb-10">
             Discover a new standard of luxury living. Your sanctuary awaits.
           </p>
           <Link

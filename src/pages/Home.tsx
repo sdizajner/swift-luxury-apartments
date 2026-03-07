@@ -14,7 +14,7 @@ export default function Home() {
   useScrollAnimation();
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center bg-background">
         <div className="absolute inset-0 z-0">
@@ -29,14 +29,14 @@ export default function Home() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full">
           <div className="max-w-xl border-l-2 border-primary/30 pl-5 sm:pl-8 py-4 scroll-fade-left">
-            <p className="font-sans-elegant text-sm tracking-[0.4em] text-primary/80 uppercase mb-6">
+            <p className="font-sans-elegant text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.4em] text-primary/80 uppercase mb-4 sm:mb-6">
               Exclusive Collection
             </p>
             <h1 className="font-serif-display text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] text-foreground mb-6 sm:mb-8">
               Where Luxury Meets{" "}
               <span className="italic text-gold-gradient">Serenity</span>
             </h1>
-            <p className="font-serif-body text-lg md:text-xl text-muted-foreground max-w-md leading-relaxed mb-10">
+            <p className="font-serif-body text-base sm:text-lg md:text-xl text-muted-foreground max-w-md leading-relaxed mb-8 sm:mb-10">
               Discover an unparalleled living experience. Our exclusive
               residences offer the perfect blend of modern elegance and timeless
               comfort.
@@ -68,7 +68,7 @@ export default function Home() {
             <h2 className="font-serif-display text-3xl sm:text-4xl md:text-5xl font-bold text-gold-gradient mb-4 sm:mb-6">
               The Art of Living
             </h2>
-            <p className="font-serif-body text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="font-serif-body text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
               Every detail is meticulously crafted to provide an environment of
               absolute comfort and sophistication.
             </p>
@@ -111,7 +111,7 @@ export default function Home() {
                 <div className="w-16 h-16 mx-auto rounded-full border border-primary/60 flex items-center justify-center mb-8 hover:bg-primary/10 transition-colors duration-300 group">
                   <feature.icon className="text-primary w-7 h-7 group-hover:scale-110 transition-transform duration-500" />
                 </div>
-                <h3 className="font-serif-display text-xl font-semibold text-white mb-4">
+                <h3 className="font-serif-display text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">
                   {feature.title}
                 </h3>
                 <p className="font-serif-body text-base text-muted-foreground leading-relaxed">
@@ -166,7 +166,7 @@ export default function Home() {
                   <p className="font-sans-elegant text-xs tracking-widest uppercase text-primary/70 mb-3">
                     — {apt.loc} —
                   </p>
-                  <h3 className="font-serif-display text-xl font-semibold text-gold-gradient mb-4">
+                  <h3 className="font-serif-display text-lg sm:text-xl font-semibold text-gold-gradient mb-3 sm:mb-4">
                     {apt.title}
                   </h3>
                   <p className="font-serif-body text-base text-muted-foreground mb-6">
@@ -197,16 +197,16 @@ export default function Home() {
   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
 />
             </div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 border-b-2 border-l-2 border-primary/30 pointer-events-none" />
+            <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 w-20 h-20 sm:w-32 sm:h-32 border-b-2 border-l-2 border-primary/30 pointer-events-none" />
           </div>
           <div className="scroll-fade-right lg:pl-12">
-            <p className="font-sans-elegant text-sm tracking-[0.4em] text-primary/80 uppercase mb-6">
+            <p className="font-sans-elegant text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.4em] text-primary/80 uppercase mb-4 sm:mb-6">
               — Five-Star Services
             </p>
-            <h2 className="font-serif-display text-4xl md:text-5xl font-bold text-gold-gradient mb-8">
+            <h2 className="font-serif-display text-2xl sm:text-3xl md:text-5xl font-bold text-gold-gradient mb-6 sm:mb-8">
               Curated For Your Absolute Comfort
             </h2>
-            <p className="font-serif-body text-lg text-muted-foreground mb-10 leading-relaxed">
+            <p className="font-serif-body text-base sm:text-lg text-muted-foreground mb-8 sm:mb-10 leading-relaxed">
               Life at Swift extends far beyond your private residence. Enjoy exclusive access to world-class amenities and personalized services designed to anticipate your every need.
             </p>
             <ul className="space-y-6 mb-12">
@@ -218,7 +218,7 @@ export default function Home() {
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-4">
                   <div className="w-1.5 h-1.5 bg-primary rotate-45" />
-                  <span className="font-serif-body text-lg text-foreground">{item}</span>
+                  <span className="font-serif-body text-base sm:text-lg text-foreground">{item}</span>
                 </li>
               ))}
             </ul>
@@ -243,7 +243,7 @@ export default function Home() {
           <h2 className="font-serif-display text-2xl sm:text-3xl md:text-5xl leading-tight text-foreground italic mb-6 sm:mb-10">
             "True luxury is not just about what you see, but the profound sense of peace you feel the moment you step inside."
           </h2>
-          <p className="font-sans-elegant text-sm tracking-[0.3em] uppercase text-primary/80">
+          <p className="font-sans-elegant text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.3em] uppercase text-primary/80">
             — The Swift Vision
           </p>
         </div>
@@ -291,7 +291,7 @@ export default function Home() {
           <h2 className="font-serif-display text-3xl sm:text-4xl md:text-5xl font-bold text-gold-gradient mb-6 sm:mb-8">
             Join Our Private List
           </h2>
-          <p className="font-serif-body text-lg text-muted-foreground mb-10">
+          <p className="font-serif-body text-base sm:text-lg text-muted-foreground mb-8 sm:mb-10">
             Be the first to know about new exclusive listings and private
             events.
           </p>

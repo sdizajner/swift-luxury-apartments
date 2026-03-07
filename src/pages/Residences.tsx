@@ -66,18 +66,18 @@ export default function Residences() {
 ];
 
   return (
-    <div className="w-full bg-background min-h-screen pt-24 sm:pt-28 md:pt-36 pb-16 sm:pb-20">
+    <div className="w-full bg-background min-h-screen pt-24 sm:pt-28 md:pt-36 pb-16 sm:pb-20 overflow-x-hidden">
       {/* Hero */}
       <section className="relative text-center max-w-7xl mx-auto px-4 sm:px-6 mb-16 sm:mb-20 md:mb-28 scroll-fade-up">
         <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-primary/15 to-transparent -z-10" />
-        <p className="font-sans-elegant text-sm tracking-[0.4em] text-primary/80 uppercase mb-6">
+        <p className="font-sans-elegant text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.4em] text-primary/80 uppercase mb-4 sm:mb-6">
           — Collection —
         </p>
         <h1 className="font-serif-display text-3xl sm:text-5xl md:text-7xl font-bold text-gold-gradient mb-6 sm:mb-8">
           Our Exclusive Residences
         </h1>
         <div className="w-20 h-[2px] bg-primary/40 mx-auto mb-8" />
-        <p className="font-serif-body text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        <p className="font-serif-body text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
           Explore our curated selection of ultra-luxury apartments, each
           designed to offer an unparalleled living experience with bespoke
           finishes and state-of-the-art amenities.
@@ -133,7 +133,7 @@ export default function Residences() {
         <h3 className="font-serif-display text-2xl sm:text-3xl font-semibold text-gold-gradient mb-3 sm:mb-4">
           {res.title}
         </h3>
-        <p className="font-serif-body text-lg text-muted-foreground mb-6 whitespace-pre-line">
+        <p className="font-serif-body text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 whitespace-pre-line">
           {res.desc}
         </p>
         <button

@@ -44,6 +44,9 @@
     --cream: 40 30% 92%;
   }
 
+  html, body {
+    overflow-x: hidden;
+  }
   body {
     @apply bg-background text-foreground font-sans-elegant antialiased;
   }
