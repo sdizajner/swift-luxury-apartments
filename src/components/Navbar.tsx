@@ -32,6 +32,10 @@ export function Navbar() {
     { name: "Contact", path: "/contact" },
   ];
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
+
   return (
     <nav
       className={cn(
@@ -76,7 +80,7 @@ export function Navbar() {
         <button
           type="button"
           className="md:hidden text-primary p-3 min-w-[44px] min-h-[44px] flex items-center justify-center -mr-1 rounded-md active:bg-primary/10 transition-colors touch-manipulation cursor-pointer z-[70] relative"
-          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+          onClick={toggleMobileMenu}
           aria-label={isMobileMenuOpen ? "Zatvori meni" : "Otvori meni"}
           aria-expanded={isMobileMenuOpen}
         >
@@ -84,16 +88,15 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Nav - full-width, touch-friendly, iznad hero sekcije */}
+      {/* Mobile Nav - grid za glatku animaciju otvaranja/zatvaranja */}
       <div
         className={cn(
-          "md:hidden absolute top-full left-0 right-0 w-full z-[100] bg-background/98 backdrop-blur-lg border-t border-border shadow-gold transition-all duration-300",
-          isMobileMenuOpen
-            ? "max-h-96 opacity-100 pointer-events-auto"
-            : "max-h-0 opacity-0 pointer-events-none overflow-hidden",
+          "md:hidden grid z-[100] absolute top-full left-0 right-0 w-full transition-all duration-300 ease-in-out",
+          isMobileMenuOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0 pointer-events-none",
         )}
       >
-        <div className="flex flex-col px-4 sm:px-6 py-4 gap-1">
+        <div className="overflow-hidden">
+          <div className="flex flex-col px-4 sm:px-6 py-4 gap-1 bg-background/98 backdrop-blur-lg border-t border-border shadow-gold">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -108,6 +111,7 @@ export function Navbar() {
               {link.name}
             </Link>
           ))}
+          </div>
         </div>
       </div>
     </nav>
