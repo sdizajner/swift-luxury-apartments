@@ -13,6 +13,9 @@ import luxuryVideo from '@/assets/videos/luxury-video.mp4';
 export default function Home() {
   useScrollAnimation();
 
+  // Explicit mapping of images for apartments
+  const apartmentImages = [slikaApt1, slikaApt2, slikaApt3];
+
   return (
     <div className="w-full overflow-x-hidden">
       {/* Hero Section */}
@@ -21,7 +24,7 @@ export default function Home() {
           <img
             src={slikaHero}
             alt="Luxury interior"
-            className="w-full h-full object-contain object-center sm:object-cover"
+            className="w-full h-full object-cover object-center"
           />
           {/* Overlay za bolju čitljivost teksta (polutransparentna tamna sloj) */}
           <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
@@ -29,21 +32,21 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/40" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full flex items-center justify-center sm:justify-start">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full flex flex-col items-center sm:flex-row sm:items-center justify-center sm:justify-start text-center sm:text-left">
           <div className="max-w-xl w-full text-center sm:text-left border-l-0 sm:border-l-2 border-primary/30 pl-0 sm:pl-8 py-4 scroll-fade-left">
-            <p className="font-sans-elegant text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.4em] text-primary/90 uppercase mb-3 sm:mb-6">
+            <p className="font-sans-elegant text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.4em] text-primary/90 uppercase mb-3 sm:mb-6 text-center sm:text-left">
               Exclusive Collection
             </p>
-            <h1 className="font-serif-display text-3xl sm:text-5xl md:text-7xl font-bold leading-tight sm:leading-[1.1] text-foreground mb-4 sm:mb-8">
+            <h1 className="font-serif-display text-3xl sm:text-5xl md:text-7xl font-bold leading-tight sm:leading-[1.1] text-foreground mb-4 sm:mb-8 text-center sm:text-left">
               Where Luxury Meets{" "}
               <span className="italic text-gold-gradient">Serenity</span>
             </h1>
-            <p className="font-serif-body text-sm sm:text-lg md:text-xl text-muted-foreground max-w-md mx-auto sm:mx-0 leading-relaxed mb-6 sm:mb-10">
+            <p className="font-serif-body text-sm sm:text-lg md:text-xl text-muted-foreground max-w-md mx-auto sm:mx-0 leading-relaxed mb-6 sm:mb-10 text-center sm:text-left">
               Discover an unparalleled living experience. Our exclusive
               residences offer the perfect blend of modern elegance and timeless
               comfort.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center sm:justify-start items-stretch sm:items-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center sm:justify-start items-center text-center sm:items-center">
               <Link
                 to="/residences"
                 className="w-full sm:w-auto min-w-[200px] sm:min-w-0 bg-primary text-primary-foreground px-6 py-3.5 font-sans-elegant text-sm tracking-widest uppercase hover:bg-gold-light transition-colors duration-300 text-center rounded-sm"
@@ -155,13 +158,16 @@ export default function Home() {
                 key={idx}
                 className={cn("scroll-fade-up", apt.delay, apt.offset)}
               >
-                <div className="relative overflow-hidden aspect-[4/5] min-h-[280px] mb-4 sm:mb-6 group">
-                 <img
-  // Postavi odgovarajuću sliku za svaki apartman
-  src={idx === 0 ? slikaApt1 : idx === 1 ? slikaApt2 : slikaApt3}
-  alt={apt.title}
-  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
+                <div className={cn(
+                  "relative overflow-hidden min-h-[220px] mb-4 sm:mb-6 group",
+                  "aspect-square",    // Default on mobile
+                  "sm:aspect-[4/5]"   // Keep original for sm+
+                )}>
+                  <img
+                    src={apartmentImages[idx]}
+                    alt={apt.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
                   <div className="absolute inset-0 border border-primary/20 m-4 pointer-events-none" />
                 </div>
                 <div className="text-center">
