@@ -35,13 +35,13 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]",
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-gold py-4"
-          : "bg-transparent py-6",
+          ? "bg-background/95 backdrop-blur-md shadow-gold py-3 sm:py-4"
+          : "bg-transparent py-4 sm:py-6",
       )}
     >
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
         <Link to="/" className="flex flex-col items-start group">
           <span className="font-serif-display text-2xl font-bold text-gold-gradient">
             Swift
@@ -72,30 +72,31 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Menu Toggle - min 44px touch target */}
         <button
-          className="md:hidden text-primary p-2"
+          className="md:hidden text-primary p-3 min-w-[44px] min-h-[44px] flex items-center justify-center -mr-1 rounded-md active:bg-primary/10 transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isMobileMenuOpen}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Nav - full-width, touch-friendly */}
       <div
         className={cn(
-          "md:hidden absolute top-full left-0 w-full bg-background/98 backdrop-blur-lg border-t border-border transition-all duration-300 overflow-hidden",
+          "md:hidden absolute top-full left-0 w-full bg-background/98 backdrop-blur-lg border-t border-border shadow-gold transition-all duration-300 overflow-hidden",
           isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
         )}
       >
-        <div className="flex flex-col px-6 py-4 space-y-4">
+        <div className="flex flex-col px-4 sm:px-6 py-4 gap-1">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
               className={cn(
-                "font-sans-elegant text-sm tracking-widest uppercase py-2 transition-colors duration-300",
+                "font-sans-elegant text-sm tracking-widest uppercase py-3 px-2 -mx-2 rounded min-h-[44px] flex items-center transition-colors duration-300 active:bg-primary/10",
                 location.pathname === link.path
                   ? "text-primary"
                   : "text-foreground/70 hover:text-primary",

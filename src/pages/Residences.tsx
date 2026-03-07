@@ -66,14 +66,14 @@ export default function Residences() {
 ];
 
   return (
-    <div className="w-full bg-background min-h-screen pt-36 pb-20">
+    <div className="w-full bg-background min-h-screen pt-24 sm:pt-28 md:pt-36 pb-16 sm:pb-20">
       {/* Hero */}
-      <section className="relative text-center max-w-7xl mx-auto px-6 mb-28 scroll-fade-up">
+      <section className="relative text-center max-w-7xl mx-auto px-4 sm:px-6 mb-16 sm:mb-20 md:mb-28 scroll-fade-up">
         <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-primary/15 to-transparent -z-10" />
         <p className="font-sans-elegant text-sm tracking-[0.4em] text-primary/80 uppercase mb-6">
           — Collection —
         </p>
-        <h1 className="font-serif-display text-5xl md:text-7xl font-bold text-gold-gradient mb-8">
+        <h1 className="font-serif-display text-3xl sm:text-5xl md:text-7xl font-bold text-gold-gradient mb-6 sm:mb-8">
           Our Exclusive Residences
         </h1>
         <div className="w-20 h-[2px] bg-primary/40 mx-auto mb-8" />
@@ -85,15 +85,15 @@ export default function Residences() {
       </section>
 
       {/* Decorative Divider */}
-      <div className="flex items-center justify-center mb-28 px-6 opacity-60">
+      <div className="flex items-center justify-center mb-16 sm:mb-20 md:mb-28 px-4 sm:px-6 opacity-60">
         <div className="w-[30%] h-px bg-gradient-to-r from-transparent to-primary/40" />
         <div className="w-2 h-2 border border-primary/30 rotate-45 mx-4" />
         <div className="w-[40%] h-px bg-gradient-to-l from-transparent to-primary/40" />
       </div>
 
       {/* Grid */}
-      <section id="collection" className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 space-y-28 md:space-y-0">
+      <section id="collection" className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-16 space-y-16 sm:space-y-20 md:space-y-0 md:gap-y-16">
 {residences.map((res, idx) => {
   const isOddRow = Math.floor(idx / 2) % 2 !== 0;
   const isRightCol = idx % 2 !== 0;
@@ -108,7 +108,7 @@ export default function Residences() {
       )}
     >
       <div
-        className="relative aspect-[16/10] overflow-hidden mb-8 cursor-pointer"
+        className="relative aspect-[16/10] min-h-[220px] overflow-hidden mb-6 sm:mb-8 cursor-pointer touch-manipulation"
         onClick={() => setLightboxImg(res.img)}
       >
         <img
@@ -129,8 +129,8 @@ export default function Residences() {
         <div className="absolute bottom-4 right-4 w-8 h-8 border-b border-r border-primary/20 group-hover:w-12 group-hover:h-12 group-hover:border-primary/40 transition-all duration-500 pointer-events-none" />
       </div>
 
-      <div className="border-l border-primary/15 pl-6 group-hover:border-primary/40 transition-colors duration-500">
-        <h3 className="font-serif-display text-3xl font-semibold text-gold-gradient mb-4">
+      <div className="border-l border-primary/15 pl-4 sm:pl-6 group-hover:border-primary/40 transition-colors duration-500">
+        <h3 className="font-serif-display text-2xl sm:text-3xl font-semibold text-gold-gradient mb-3 sm:mb-4">
           {res.title}
         </h3>
         <p className="font-serif-body text-lg text-muted-foreground mb-6 whitespace-pre-line">
@@ -154,7 +154,7 @@ export default function Residences() {
       </section>
 
       {/* Bottom Decorative Element */}
-      <div className="flex flex-col items-center justify-center mt-32 px-6 opacity-60">
+      <div className="flex flex-col items-center justify-center mt-20 sm:mt-28 md:mt-32 px-4 sm:px-6 opacity-60">
         <div className="relative flex items-center justify-center w-16 h-16 mb-4">
           <div className="absolute w-8 h-8 border border-primary/30 rotate-45" />
           <div className="absolute w-3 h-3 border border-primary/50 rotate-45" />
@@ -169,11 +169,11 @@ export default function Residences() {
    {/* Lightbox */}
 {lightboxImg && (
   <div 
-    className="fixed inset-0 z-[100] bg-background/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-12"
+    className="fixed inset-0 z-[100] bg-background/95 backdrop-blur-xl flex flex-col items-center justify-center p-4 sm:p-6 md:p-12 pt-16 sm:pt-12"
     onClick={() => setLightboxImg(null)} // Zatvara klikom bilo gde sa strane
   >
     <button
-      className="absolute top-6 right-6 z-[110] text-primary/70 hover:text-primary transition-colors bg-background/50 p-2 rounded-full"
+      className="absolute top-4 right-4 sm:top-6 sm:right-6 z-[110] text-primary/70 hover:text-primary transition-colors bg-background/50 p-3 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full touch-manipulation"
       onClick={() => setLightboxImg(null)}
     >
       <X size={32} />

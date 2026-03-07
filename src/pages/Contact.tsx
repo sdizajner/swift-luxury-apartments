@@ -8,8 +8,8 @@ export default function Contact() {
   return (
     <div className="w-full bg-background min-h-screen">
       {/* Hero */}
-      <section className="pt-32 pb-16 text-center max-w-7xl mx-auto px-6 scroll-fade-up">
-        <h1 className="font-serif-display text-4xl md:text-6xl font-bold text-gold-gradient mb-6">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 text-center max-w-7xl mx-auto px-4 sm:px-6 scroll-fade-up">
+        <h1 className="font-serif-display text-3xl sm:text-4xl md:text-6xl font-bold text-gold-gradient mb-4 sm:mb-6">
           Get in Touch
         </h1>
         <p className="font-serif-body text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -20,8 +20,8 @@ export default function Contact() {
       </section>
 
       {/* Contact Info & Form */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 sm:gap-16 lg:gap-8">
           {/* Info Side */}
           <div className="lg:col-span-2 scroll-fade-left">
             <h2 className="font-serif-display text-3xl font-bold text-gold-gradient mb-8">
@@ -61,7 +61,7 @@ export default function Contact() {
 
           {/* Form Side */}
           <div className="lg:col-span-3 scroll-fade-right lg:mt-12">
-            <div className="bg-gradient-card border border-primary/30 p-8 md:p-12">
+            <div className="bg-gradient-card border border-primary/30 p-6 sm:p-8 md:p-12">
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -143,9 +143,9 @@ export default function Contact() {
       </section>
 
       {/* Offices */}
-      <section id="offices" className="bg-secondary/20 border-t border-border py-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16 scroll-fade-up">
+      <section id="offices" className="bg-secondary/20 border-t border-border py-16 sm:py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 scroll-fade-up">
             <h2 className="font-serif-display text-3xl md:text-4xl font-bold text-gold-gradient mb-4">
               Our Offices
             </h2>
@@ -153,7 +153,7 @@ export default function Contact() {
               Visit us at our global locations.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 city: "New York",

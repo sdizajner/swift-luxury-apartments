@@ -27,12 +27,12 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
-          <div className="max-w-xl border-l-2 border-primary/30 pl-8 py-4 scroll-fade-left">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full">
+          <div className="max-w-xl border-l-2 border-primary/30 pl-5 sm:pl-8 py-4 scroll-fade-left">
             <p className="font-sans-elegant text-sm tracking-[0.4em] text-primary/80 uppercase mb-6">
               Exclusive Collection
             </p>
-            <h1 className="font-serif-display text-5xl md:text-7xl font-bold leading-[1.1] text-foreground mb-8">
+            <h1 className="font-serif-display text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] text-foreground mb-6 sm:mb-8">
               Where Luxury Meets{" "}
               <span className="italic text-gold-gradient">Serenity</span>
             </h1>
@@ -62,10 +62,10 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="bg-gradient-luxury py-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20 scroll-fade-up">
-            <h2 className="font-serif-display text-4xl md:text-5xl font-bold text-gold-gradient mb-6">
+      <section className="bg-gradient-luxury py-16 sm:py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20 scroll-fade-up">
+            <h2 className="font-serif-display text-3xl sm:text-4xl md:text-5xl font-bold text-gold-gradient mb-4 sm:mb-6">
               The Art of Living
             </h2>
             <p className="font-serif-body text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -74,7 +74,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-6">
             {[
               {
                 icon: MapPin,
@@ -124,9 +124,9 @@ export default function Home() {
       </section>
 
       {/* Apartments Section */}
-      <section className="bg-background py-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="bg-background py-16 sm:py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-8">
             {[
               {
                 img: "apartment-1",
@@ -153,7 +153,7 @@ export default function Home() {
                 key={idx}
                 className={cn("scroll-fade-up", apt.delay, apt.offset)}
               >
-                <div className="relative overflow-hidden aspect-[4/5] mb-6 group">
+                <div className="relative overflow-hidden aspect-[4/5] min-h-[280px] mb-4 sm:mb-6 group">
                  <img
   // Postavi odgovarajuću sliku za svaki apartman
   src={idx === 0 ? slikaApt1 : idx === 1 ? slikaApt2 : slikaApt3}
@@ -187,10 +187,10 @@ export default function Home() {
       </section>
 
       {/* Amenities Section */}
-      <section className="py-28 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="py-16 sm:py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
           <div className="relative scroll-fade-left">
-            <div className="aspect-[4/5] overflow-hidden group">
+            <div className="aspect-[4/5] min-h-[280px] overflow-hidden group">
              <img
   src={slikaAmenities} // <--- Koristiš uvezenu varijablu umesto eksternog linka
   alt="Luxury Amenities"
@@ -234,13 +234,13 @@ export default function Home() {
       </section>
 
       {/* Signature Quote */}
-      <section className="bg-secondary/20 border-y border-border py-32 relative overflow-hidden">
+      <section className="bg-secondary/20 border-y border-border py-16 sm:py-24 md:py-32 relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-16 bg-gradient-to-b from-primary/30 to-transparent" />
-        <div className="max-w-4xl mx-auto px-6 text-center scroll-fade-up">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center scroll-fade-up">
           <div className="w-8 h-8 mx-auto border border-primary/30 rotate-45 mb-10 flex items-center justify-center">
             <div className="w-2 h-2 bg-primary/50" />
           </div>
-          <h2 className="font-serif-display text-3xl md:text-5xl leading-tight text-foreground italic mb-10">
+          <h2 className="font-serif-display text-2xl sm:text-3xl md:text-5xl leading-tight text-foreground italic mb-6 sm:mb-10">
             "True luxury is not just about what you see, but the profound sense of peace you feel the moment you step inside."
           </h2>
           <p className="font-sans-elegant text-sm tracking-[0.3em] uppercase text-primary/80">
@@ -251,8 +251,8 @@ export default function Home() {
       </section>
 
       {/* Cinematic Teaser */}
-      <section className="py-28 max-w-7xl mx-auto px-6">
-        <div className="relative aspect-[16/9] min-h-[400px] overflow-hidden group scroll-scale">
+      <section className="py-16 sm:py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="relative aspect-[16/9] min-h-[220px] sm:min-h-[320px] md:min-h-[400px] overflow-hidden group scroll-scale">
          <video
   src={luxuryVideo}
   autoPlay
@@ -266,7 +266,7 @@ export default function Home() {
             <div className="w-20 h-20 rounded-full border border-white/30 flex items-center justify-center backdrop-blur-md bg-white/5 mb-6 group-hover:border-primary/60 group-hover:bg-primary/20 transition-all duration-500 cursor-pointer">
               <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1 group-hover:border-l-primary transition-colors duration-500" />
             </div>
-            <h3 className="font-serif-display text-3xl md:text-4xl font-bold text-white mb-4">
+            <h3 className="font-serif-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
               Experience the Extraordinary
             </h3>
             <p className="font-sans-elegant text-sm tracking-widest uppercase text-white/80">
@@ -282,13 +282,13 @@ export default function Home() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="bg-gradient-luxury py-28 relative overflow-hidden">
+      <section className="bg-gradient-luxury py-16 sm:py-20 md:py-28 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none" />
         <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none" />
 
-        <div className="max-w-3xl mx-auto px-6 text-center relative z-10 scroll-scale">
-          <h2 className="font-serif-display text-4xl md:text-5xl font-bold text-gold-gradient mb-8">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center relative z-10 scroll-scale">
+          <h2 className="font-serif-display text-3xl sm:text-4xl md:text-5xl font-bold text-gold-gradient mb-6 sm:mb-8">
             Join Our Private List
           </h2>
           <p className="font-serif-body text-lg text-muted-foreground mb-10">

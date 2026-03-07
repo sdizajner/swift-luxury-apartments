@@ -12,7 +12,7 @@ export default function AboutUs() {
   return (
     <div className="w-full bg-background min-h-screen">
       {/* Hero */}
-      <section className="relative h-[70vh] min-h-[500px] flex items-center">
+      <section className="relative h-[60vh] min-h-[400px] sm:min-h-[450px] md:min-h-[500px] md:h-[70vh] flex items-center">
         <div className="absolute inset-0 z-0">
          <img
   src={aboutHero} // Promenjeno sa picsum linka
@@ -21,9 +21,9 @@ export default function AboutUs() {
 />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full">
           <div className="max-w-xl scroll-fade-left">
-            <h1 className="font-serif-display text-4xl md:text-6xl font-bold text-gold-gradient mb-6">
+            <h1 className="font-serif-display text-3xl sm:text-4xl md:text-6xl font-bold text-gold-gradient mb-4 sm:mb-6">
               A Legacy of Excellence
             </h1>
             <p className="font-serif-body text-lg text-muted-foreground leading-relaxed">
@@ -36,8 +36,8 @@ export default function AboutUs() {
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-secondary/30 border-y border-border py-10">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center scroll-fade-up">
+      <section className="bg-secondary/30 border-y border-border py-8 sm:py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center scroll-fade-up">
           {[
             { num: "150+", label: "Exclusive Residences" },
             { num: "12", label: "Awards Won" },
@@ -57,8 +57,8 @@ export default function AboutUs() {
       </section>
 
       {/* Our Story */}
-      <section className="py-28 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="py-16 sm:py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16 items-center">
           <div className="scroll-fade-left">
             <h2 className="font-serif-display text-4xl font-bold text-gold-gradient mb-8">
               Our Story
@@ -83,7 +83,7 @@ export default function AboutUs() {
             </div>
           </div>
           <div className="relative scroll-fade-right md:mt-16">
-            <div className="aspect-[4/5] overflow-hidden">
+            <div className="aspect-[4/5] min-h-[280px] overflow-hidden">
              <img
   src={aboutStory} // Promenjeno sa picsum linka
   alt="Our Story"
@@ -96,9 +96,9 @@ export default function AboutUs() {
       </section>
 
       {/* Our Values */}
-      <section className="bg-secondary/20 py-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20 scroll-fade-up">
+      <section className="bg-secondary/20 py-16 sm:py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20 scroll-fade-up">
             <h2 className="font-serif-display text-4xl font-bold text-gold-gradient mb-6">
               Core Values
             </h2>
@@ -107,7 +107,7 @@ export default function AboutUs() {
               experiences we create.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
               {
                 icon: Diamond,
@@ -153,10 +153,10 @@ export default function AboutUs() {
       </section>
 
       {/* Philosophy */}
-      <section className="py-28 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="py-16 sm:py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16 items-center">
           <div className="relative scroll-fade-left order-2 md:order-1">
-            <div className="aspect-[4/5] overflow-hidden">
+            <div className="aspect-[4/5] min-h-[280px] overflow-hidden">
              <img
   src={aboutPhilosophy} // Promenjeno sa picsum linka
   alt="Our Philosophy"
@@ -193,8 +193,8 @@ export default function AboutUs() {
       </section>
 
       {/* CTA */}
-      <section className="bg-secondary/20 border-t border-border py-28">
-        <div className="max-w-3xl mx-auto px-6 text-center scroll-scale">
+      <section className="bg-secondary/20 border-t border-border py-16 sm:py-20 md:py-28">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center scroll-scale">
           <h2 className="font-serif-display text-4xl font-bold text-gold-gradient mb-8">
             Experience the Extraordinary
           </h2>

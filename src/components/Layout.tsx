@@ -38,18 +38,18 @@ export function Layout() {
       </main>
       <Footer />
 
-      {/* Fixed Scroll Controls */}
-      <div className="fixed right-6 bottom-12 z-50 flex flex-col gap-3">
+      {/* Fixed Scroll Controls - responsive positioning */}
+      <div className="fixed right-4 bottom-20 sm:right-6 sm:bottom-12 z-50 flex flex-col gap-2 sm:gap-3 pr-[env(safe-area-inset-right)] pb-[env(safe-area-inset-bottom)]">
         <button
           onClick={scrollUp}
-          className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center backdrop-blur-sm bg-background/20 text-primary opacity-60 hover:opacity-100 hover:bg-primary/10 hover:border-primary/60 transition-all duration-300 group"
+          className="w-11 h-11 sm:w-10 sm:h-10 min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 rounded-full border border-primary/30 flex items-center justify-center backdrop-blur-sm bg-background/20 text-primary opacity-60 hover:opacity-100 active:opacity-100 hover:bg-primary/10 hover:border-primary/60 transition-all duration-300 group touch-manipulation"
           aria-label="Scroll Up"
         >
           <ChevronUp size={20} className="group-hover:-translate-y-0.5 transition-transform duration-300" />
         </button>
         <button
           onClick={scrollDown}
-          className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center backdrop-blur-sm bg-background/20 text-primary opacity-60 hover:opacity-100 hover:bg-primary/10 hover:border-primary/60 transition-all duration-300 group"
+          className="w-11 h-11 sm:w-10 sm:h-10 min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 rounded-full border border-primary/30 flex items-center justify-center backdrop-blur-sm bg-background/20 text-primary opacity-60 hover:opacity-100 active:opacity-100 hover:bg-primary/10 hover:border-primary/60 transition-all duration-300 group touch-manipulation"
           aria-label="Scroll Down"
         >
           <ChevronDown size={20} className="group-hover:translate-y-0.5 transition-transform duration-300" />

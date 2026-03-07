@@ -124,6 +124,18 @@
     opacity: 1;
   }
 
+  /* Mobile: reduce scroll animation distance for smaller viewport */
+  @media (max-width: 767px) {
+    .scroll-fade-up { transform: translateY(30px); }
+    .scroll-fade-left { transform: translateX(-40px); }
+    .scroll-fade-right { transform: translateX(40px); }
+  }
+
+  /* touch-manipulation: disables double-tap zoom on buttons */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
   .delay-100 {
     transition-delay: 100ms;
   }
