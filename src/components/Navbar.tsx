@@ -74,19 +74,20 @@ export function Navbar() {
 
         {/* Mobile Menu Toggle - min 44px touch target */}
         <button
-          className="md:hidden text-primary p-3 min-w-[44px] min-h-[44px] flex items-center justify-center -mr-1 rounded-md active:bg-primary/10 transition-colors"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
+          type="button"
+          className="md:hidden text-primary p-3 min-w-[44px] min-h-[44px] flex items-center justify-center -mr-1 rounded-md active:bg-primary/10 transition-colors touch-manipulation cursor-pointer z-[70] relative"
+          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+          aria-label={isMobileMenuOpen ? "Zatvori meni" : "Otvori meni"}
           aria-expanded={isMobileMenuOpen}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Nav - full-width, touch-friendly */}
+      {/* Mobile Nav - full-width, touch-friendly, iznad hero sekcije */}
       <div
         className={cn(
-          "md:hidden absolute top-full left-0 right-0 w-full z-[60] bg-background/98 backdrop-blur-lg border-t border-border shadow-gold transition-all duration-300",
+          "md:hidden absolute top-full left-0 right-0 w-full z-[100] bg-background/98 backdrop-blur-lg border-t border-border shadow-gold transition-all duration-300",
           isMobileMenuOpen
             ? "max-h-96 opacity-100 pointer-events-auto"
             : "max-h-0 opacity-0 pointer-events-none overflow-hidden",

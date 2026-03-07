@@ -19,38 +19,40 @@ export default function Home() {
       <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center sm:justify-start bg-background">
         <div className="absolute inset-0 z-0">
           <img
-  src={slikaHero}
-  alt="Luxury interior"
-  className="w-full h-full object-contain object-center sm:object-cover"
-        />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
+            src={slikaHero}
+            alt="Luxury interior"
+            className="w-full h-full object-contain object-center sm:object-cover"
+          />
+          {/* Overlay za bolju čitljivost teksta (polutransparentna tamna sloj) */}
+          <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/40" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full flex justify-center sm:justify-start">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full flex items-center justify-center sm:justify-start">
           <div className="max-w-xl w-full text-center sm:text-left border-l-0 sm:border-l-2 border-primary/30 pl-0 sm:pl-8 py-4 scroll-fade-left">
-            <p className="font-sans-elegant text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.4em] text-primary/80 uppercase mb-4 sm:mb-6">
+            <p className="font-sans-elegant text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.4em] text-primary/90 uppercase mb-3 sm:mb-6">
               Exclusive Collection
             </p>
-            <h1 className="font-serif-display text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] text-foreground mb-6 sm:mb-8">
+            <h1 className="font-serif-display text-3xl sm:text-5xl md:text-7xl font-bold leading-tight sm:leading-[1.1] text-foreground mb-4 sm:mb-8">
               Where Luxury Meets{" "}
               <span className="italic text-gold-gradient">Serenity</span>
             </h1>
-            <p className="font-serif-body text-base sm:text-lg md:text-xl text-muted-foreground max-w-md leading-relaxed mb-8 sm:mb-10">
+            <p className="font-serif-body text-sm sm:text-lg md:text-xl text-muted-foreground max-w-md mx-auto sm:mx-0 leading-relaxed mb-6 sm:mb-10">
               Discover an unparalleled living experience. Our exclusive
               residences offer the perfect blend of modern elegance and timeless
               comfort.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center sm:justify-start items-stretch sm:items-center">
               <Link
                 to="/residences"
-                className="bg-primary text-primary-foreground px-8 py-3 font-sans-elegant text-sm tracking-widest uppercase hover:bg-gold-light transition-colors duration-300 text-center"
+                className="w-full sm:w-auto min-w-[200px] sm:min-w-0 bg-primary text-primary-foreground px-6 py-3.5 font-sans-elegant text-sm tracking-widest uppercase hover:bg-gold-light transition-colors duration-300 text-center rounded-sm"
               >
                 Explore
               </Link>
               <Link
                 to="/about"
-                className="bg-transparent border border-primary/60 text-primary px-8 py-3 font-sans-elegant text-sm tracking-widest uppercase hover:bg-primary/10 transition-colors duration-300 text-center"
+                className="w-full sm:w-auto min-w-[200px] sm:min-w-0 bg-transparent border border-primary/60 text-primary px-6 py-3.5 font-sans-elegant text-sm tracking-widest uppercase hover:bg-primary/10 transition-colors duration-300 text-center rounded-sm"
               >
                 Learn More
               </Link>
