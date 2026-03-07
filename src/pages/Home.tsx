@@ -16,19 +16,19 @@ export default function Home() {
   return (
     <div className="w-full overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center bg-background">
+      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center sm:justify-start bg-background">
         <div className="absolute inset-0 z-0">
           <img
-  src={slikaHero} // <--- Koristi uvezenu varijablu
+  src={slikaHero}
   alt="Luxury interior"
-  className="w-full h-full object-cover"
+  className="w-full h-full object-contain object-center sm:object-cover"
         />
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full">
-          <div className="max-w-xl border-l-2 border-primary/30 pl-5 sm:pl-8 py-4 scroll-fade-left">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full flex justify-center sm:justify-start">
+          <div className="max-w-xl w-full text-center sm:text-left border-l-0 sm:border-l-2 border-primary/30 pl-0 sm:pl-8 py-4 scroll-fade-left">
             <p className="font-sans-elegant text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.4em] text-primary/80 uppercase mb-4 sm:mb-6">
               Exclusive Collection
             </p>
@@ -41,7 +41,7 @@ export default function Home() {
               residences offer the perfect blend of modern elegance and timeless
               comfort.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:justify-start">
               <Link
                 to="/residences"
                 className="bg-primary text-primary-foreground px-8 py-3 font-sans-elegant text-sm tracking-widest uppercase hover:bg-gold-light transition-colors duration-300 text-center"

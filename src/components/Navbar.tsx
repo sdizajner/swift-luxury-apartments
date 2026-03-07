@@ -35,7 +35,7 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] w-full max-w-[100vw] overflow-x-hidden",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] w-full max-w-[100vw] overflow-x-hidden overflow-y-visible",
         isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-gold py-3 sm:py-4"
           : "bg-transparent py-4 sm:py-6",
@@ -86,8 +86,10 @@ export function Navbar() {
       {/* Mobile Nav - full-width, touch-friendly */}
       <div
         className={cn(
-          "md:hidden absolute top-full left-0 right-0 w-full max-w-full bg-background/98 backdrop-blur-lg border-t border-border shadow-gold transition-all duration-300 overflow-hidden",
-          isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
+          "md:hidden absolute top-full left-0 right-0 w-full z-[60] bg-background/98 backdrop-blur-lg border-t border-border shadow-gold transition-all duration-300",
+          isMobileMenuOpen
+            ? "max-h-96 opacity-100 pointer-events-auto"
+            : "max-h-0 opacity-0 pointer-events-none overflow-hidden",
         )}
       >
         <div className="flex flex-col px-4 sm:px-6 py-4 gap-1">
@@ -96,7 +98,7 @@ export function Navbar() {
               key={link.name}
               to={link.path}
               className={cn(
-                "font-sans-elegant text-sm tracking-widest uppercase py-3 px-2 -mx-2 rounded min-h-[44px] flex items-center transition-colors duration-300 active:bg-primary/10",
+                "font-sans-elegant text-sm tracking-widest uppercase py-3 px-2 -mx-2 rounded min-h-[44px] flex items-center transition-colors duration-300 active:bg-primary/10 cursor-pointer touch-manipulation",
                 location.pathname === link.path
                   ? "text-primary"
                   : "text-foreground/70 hover:text-primary",
